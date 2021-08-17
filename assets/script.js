@@ -1,3 +1,24 @@
+// ------------------------ Timer --------------------------------
+const startingMinutes = 4;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById('timer');
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown(){
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    seconds - seconds < 10 ? '0' + seconds : seconds;
+
+    countdownEl.innerHTML = `${minutes}: ${seconds}`;
+    time--;
+}
+
+
+
+// --------------------------Question's functionality-------------------
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
@@ -11,7 +32,6 @@ nextButton.addEventListener('click', () => {
     currentQuestionsIndex++
     setNextQuestion()
 })
-
 function startGame() {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -76,37 +96,56 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
+// --------------------Series of created questions---------------------
 const questions = [
     {
-        question: 'What is 2 + 2',
+        question: 'Can const be reassign/redeclared? ',
         answers: [
-            { text: '4', correct:true },
-            { text: '22', correct:false },
+            { text: 'Yes', correct:false },
+            { text: 'No', correct:true },
         ]
     },
     {
-        question: 'Who is the best Youtuber?',
+        question: 'Which of the follow is not a data type?',
         answers: [
-            { text: 'Web Dev Simplified', correct:true },
-            { text: 'Traversery Media', correct:true },
-            { text: 'Dev Ed', correct:true },
-            { text: 'Fun Fun Function', correct:true },
+            { text: 'alerts', correct:true },
+            { text: 'booleans', correct:false },
+            { text: 'strings', correct:false },
+            { text: 'numbers', correct:false },
         ]
     },
     {
-        question: 'Is web development fun?',
+        question: 'Where should you insert script javascript link in HTML?',
         answers: [
-            { text: 'Kinda', correct:false },
-            { text: 'Yes', correct:true},
-            { text: 'Um no', correct:false },
-            { text: 'IDK', correct:false },
+            { text: 'Anywhere in HTML', correct:false },
+            { text: 'Towards the bottom of body', correct:true},
+            { text: 'Inside the head', correct:false },
+            { text: 'Outside of body', correct:false },
         ]
     },
     {
-        question: 'What is 4 * 2?',
+        question: 'Do number data types need quotes?',
         answers: [
-            { text: '6', correct:false },
-            { text: '8', correct:true },
+            { text: 'Yes', correct:false },
+            { text: 'No', correct:true },
         ]
-    }
+    },
+    {
+        question: 'How do you write "Hello World" in an alert box?',
+        answers: [
+            { text: 'msg("Hello World")', correct:false },
+            { text: 'msgBox("Hello World")', correct:false },
+            { text: 'alert("Hello World")', correct:true },
+            { text: 'alertBox("Hello World")', correct:false },
+        ]
+    },
+    {
+        question: 'How do you call a function name "myFunction"?',
+        answers: [
+            { text: 'call myFunction()', correct:false },
+            { text: 'call function myFunction()', correct:false },
+            { text: 'myFunction()', correct:true },
+        ]
+    },
+
 ]
