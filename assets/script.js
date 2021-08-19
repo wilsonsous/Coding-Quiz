@@ -1,21 +1,56 @@
-// ------------------------ Timer --------------------------------
-const startingMinutes = 4;
-let time = startingMinutes * 60;
+// --------------------Series of created questions---------------------
+const questions = [
+    {
+        question: 'Can const be reassign/redeclared? ',
+        answers: [
+            { text: 'Yes', correct:false },
+            { text: 'No', correct:true },
+        ]
+    },
+    {
+        question: 'Which of the follow is not a data type?',
+        answers: [
+            { text: 'alerts', correct:true },
+            { text: 'booleans', correct:false },
+            { text: 'strings', correct:false },
+            { text: 'numbers', correct:false },
+        ]
+    },
+    {
+        question: 'Where should you insert script javascript link in HTML?',
+        answers: [
+            { text: 'Anywhere in HTML', correct:false },
+            { text: 'Towards the bottom of body', correct:true},
+            { text: 'Inside the head', correct:false },
+            { text: 'Outside of body', correct:false },
+        ]
+    },
+    {
+        question: 'Do number data types need quotes?',
+        answers: [
+            { text: 'Yes', correct:false },
+            { text: 'No', correct:true },
+        ]
+    },
+    {
+        question: 'How do you write "Hello World" in an alert box?',
+        answers: [
+            { text: 'msg("Hello World")', correct:false },
+            { text: 'msgBox("Hello World")', correct:false },
+            { text: 'alert("Hello World")', correct:true },
+            { text: 'alertBox("Hello World")', correct:false },
+        ]
+    },
+    {
+        question: 'How do you call a function name "myFunction"?',
+        answers: [
+            { text: 'call myFunction()', correct:false },
+            { text: 'call function myFunction()', correct:false },
+            { text: 'myFunction()', correct:true },
+        ]
+    },
 
-const countdownEl = document.getElementById('timer');
-
-setInterval(updateCountdown, 1000);
-
-function updateCountdown(){
-    const minutes = Math.floor(time / 60);
-    let seconds = time % 60;
-
-    seconds - seconds < 10 ? '0' + seconds : seconds;
-
-    countdownEl.innerHTML = `${minutes}: ${seconds}`;
-    time--;
-}
-
+]
 
 
 // --------------------------Question's functionality-------------------
@@ -27,7 +62,6 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionsIndex
 
-startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionsIndex++
     setNextQuestion()
@@ -96,56 +130,28 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
-// --------------------Series of created questions---------------------
-const questions = [
-    {
-        question: 'Can const be reassign/redeclared? ',
-        answers: [
-            { text: 'Yes', correct:false },
-            { text: 'No', correct:true },
-        ]
-    },
-    {
-        question: 'Which of the follow is not a data type?',
-        answers: [
-            { text: 'alerts', correct:true },
-            { text: 'booleans', correct:false },
-            { text: 'strings', correct:false },
-            { text: 'numbers', correct:false },
-        ]
-    },
-    {
-        question: 'Where should you insert script javascript link in HTML?',
-        answers: [
-            { text: 'Anywhere in HTML', correct:false },
-            { text: 'Towards the bottom of body', correct:true},
-            { text: 'Inside the head', correct:false },
-            { text: 'Outside of body', correct:false },
-        ]
-    },
-    {
-        question: 'Do number data types need quotes?',
-        answers: [
-            { text: 'Yes', correct:false },
-            { text: 'No', correct:true },
-        ]
-    },
-    {
-        question: 'How do you write "Hello World" in an alert box?',
-        answers: [
-            { text: 'msg("Hello World")', correct:false },
-            { text: 'msgBox("Hello World")', correct:false },
-            { text: 'alert("Hello World")', correct:true },
-            { text: 'alertBox("Hello World")', correct:false },
-        ]
-    },
-    {
-        question: 'How do you call a function name "myFunction"?',
-        answers: [
-            { text: 'call myFunction()', correct:false },
-            { text: 'call function myFunction()', correct:false },
-            { text: 'myFunction()', correct:true },
-        ]
-    },
+function stopGame() {
+    questionContainerElement.innerHTML = "<h2>GAME OVER</h2>";
 
-]
+}
+
+
+
+// ---------------- Timer -------------
+document.getElementById("start-btn").addEventListener("click", function(){
+    var timeleft = 60;
+
+    var downloadTimer = setInterval(function function1(){
+    document.getElementById("countdown").innerHTML = timeleft;
+
+    timeleft -= 1;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = "Time is up!"
+        stopGame()
+    }
+    }, 1000);
+
+    console.log(countdown);
+    startGame();
+});
