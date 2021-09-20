@@ -1,4 +1,6 @@
 # Coding-Quiz
+# Project Description
+This application was created for beginners learning Javascript and need a quick refresher understanding some terminology.
 # User Story
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
