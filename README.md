@@ -15,7 +15,8 @@
   # Link 
   Link to deployed application : https://wilsonsous.github.io/Coding-Quiz/
   # Visuals
-   
+   <img width="1792" alt="quiz" src="https://user-images.githubusercontent.com/78562158/134108341-c03f09b7-d294-4204-862e-73d619e7def8.png">
+
   
   # Usage
   ​This application is used for any users looking to briefly take a short javascript quiz.
