@@ -1,19 +1,30 @@
-# Coding-Quiz
-# Project Description
-This application was created for beginners learning Javascript and need a quick refresher understanding some terminology.
-# User Story
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-# Acceptance Criteria
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
+ # Coding Quiz
+
+ # Description
+   Coding Quiz allows users who are new to javascript to take a brief quiz to refresh themselves on some terminologies.
+  
+
+  # Table of Contents 
+  * [Link](#Link)
+  * [Visuals](#Visuals)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Questions](#questions)
+  
+  # Link 
+  Link to deployed application : https://wilsonsous.github.io/Coding-Quiz/
+  # Visuals
+   
+  
+  # Usage
+  ​This application is used for any users looking to briefly take a short javascript quiz.
+  
+  # License
+  This project currently has no license.
+  
+  # Contributing
+  ​Contributors: Me, Myself, and I
+  
+  # Questions
+  If you have any questions about the repo, open an issue or contact me at: souswilson@gmail.com
