@@ -3,6 +3,10 @@
  # Description
    Coding Quiz allows users who are new to javascript to take a brief quiz to refresh themselves on some terminologies. This quiz application is followed by a function 60 second timer.
   
+# Technologies used
+- HTML
+- CSS
+- JAVASCRIPT
 
   # Table of Contents 
   * [Link](#Link)
