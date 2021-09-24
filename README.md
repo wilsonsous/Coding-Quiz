@@ -16,6 +16,9 @@
   Link to deployed application : https://wilsonsous.github.io/Coding-Quiz/
   # Visuals
    <img width="1792" alt="quiz" src="https://user-images.githubusercontent.com/78562158/134108341-c03f09b7-d294-4204-862e-73d619e7def8.png">
+   
+   ![Screen Shot 2021-09-24 at 3 15 42 AM (2)](https://user-images.githubusercontent.com/78562158/134633923-297d889a-2c8f-491a-a414-5299e5f58a4f.png)
+
 
   
   # Usage
