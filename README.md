@@ -29,7 +29,7 @@
   # Usage
   ​This application is used for any users looking to briefly take a short javascript quiz.
   
-  # License
+# License
 MIT License
 
 Copyright (c) 2021 Wilson Sous
